@@ -18,11 +18,11 @@ async function init() {
             /^data:image\/(png|jpeg|jpg);base64,/, ""
         )
         console.log(input.files[0])
-        console.log(base64)
+        rustApp.grayscale(base64)
     }
 
     input.addEventListener("change", () => {
-        fileReader.readAsDataURL(input.file[0])
+        fileReader.readAsDataURL(input.files[0])
     })
 }
 
